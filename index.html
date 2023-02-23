@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RevoU course</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar">
+          <ul class="menu">
+            <li class="logo">
+              <img
+                src="/assets/Revou-alasan.original.png"
+                alt=""
+                width="50px"
+              />
+            </li>
+            <li class="nav-item"><a href="index.html">Home</a></li>
+            <li class="nav-item"><a href="profile.html">Our Profile</a></li>
+            <li class="nav-item"><a href="index.html">Portfolio</a></li>
+            <li class="nav-item"><a href="#message">Message Us</a></li>
+            <li>
+              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="hero">
+        <div class="container">
+          <h1 class="hero-header">Hi, Welcome To My Website</h1>
+          <p class="hero-paragraph">this is my first website</p>
+          <div class="hero-image">
+            <img src="/assets/shoes.png" alt="" />
+          </div>
+        </div>
+      </section>
+      <section id="shoes">
+        <div class="container shoes-image">
+          <h1 class="shoes-header">Our Product</h1>
+          <img
+            class="shoes-item"
+            src="/assets/shoes2.jpeg"
+            alt=""
+            width="100%"
+          />
+          <img
+            class="shoes-item"
+            src="/assets/shoes3.jpg"
+            alt=""
+            width="100%"
+          />
+          <img
+            class="shoes-item"
+            src="/assets/shoes4.jpeg"
+            alt=""
+            width="100%"
+          />
+        </div>
+      </section>
+      <section id="message">
+        <form>
+          <ul class="flex-outer">
+            <li>
+              <label for="name">Nama:</label>
+              <input type="text" id="name" placeholder="Kimi No Nawa" />
+            </li>
+            <li>
+              <label for="tanggal_lahir">Tanggal Lahir:</label>
+              <input type="date" id="birth" max="2015-12-31" />
+            </li>
+            <li>
+              <label for="phone">Jenis Kelamin:</label>
+              <div class="gender">
+                <input type="radio" name="gender" id="man" value="pria" />
+                <label for="man">pria</label>
+              </div>
+              <div class="gender">
+                <input type="radio" name="gender" id="woman" value="wanita" />
+                <label for="woman">wanita</label>
+              </div>
+            </li>
+            <li>
+              <label for="pesan">Pesan:</label>
+              <textarea
+                id="pesan"
+                placeholder="ada ingfo apa nich"
+                rows="4"
+                cols="50"
+              ></textarea>
+            </li>
+            <li>
+              <button onclick="functionInput()" type="button">kirim</button>
+            </li>
+          </ul>
+        </form>
+        <div class="info">
+          <p id="time">current time:</p>
+          <br />
+          <p id="names">Name:</p>
+          <p id="births">Tanggal lahir:</p>
+          <p id="genders">Jenis Kelamin:</p>
+          <p id="messages">Pesan:</p>
+        </div>
+      </section>
+    </main>
+    <footer>&copy; Copyright 2022 Aditya Rifki</footer>
+    <script src="/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,278 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* MYCSS */
+
+*{
+    box-sizing: border-box;}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: rgba(185, 185, 185, 0.45);
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+em{
+    text-transform: capitalize;
+    font-style: italic;
+    font-weight: 700;
+}
+/* MOBILE NAVBAR */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    padding: 1rem 0.5rem;
+    order: 0;
+    flex: 1;
+}
+
+.icon{
+    display: block;
+    color: black;
+    order: 1;
+}
+
+.nav-item {
+    order: 2;
+    width: 100%;
+    text-align: left;
+    padding: 1rem 0;
+    display: none;
+  }
+
+.responsive .nav-item {
+    display: block;
+  }
+
+.active a{
+    color: rgb(255, 120, 10);
+    font-weight: 700;
+} 
+
+/* mobile  */
+#header{
+    margin: 2rem;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+    box-shadow: -5px -5px 9px rgba(255,255,255,0.45), 5px 5px 9px rgba(94,104,121,0.3);
+}
+
+.title-header {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.title{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.light-font {
+    color: grey;
+}
+
+.yellow-font{
+    color: rgb(228, 148, 0);
+}
+
+#header p {
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.hit-button {
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 0.3rem 0.5rem;
+    margin: 1rem auto;
+    background-color:rgb(228, 148, 0) ;
+}
+
+
+
+/* ------------------------------------------------- */
+#contact{
+    margin: 2rem;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.contact-text{
+    flex: 1;
+}
+.contact-text p {
+    margin-top: 1rem;
+}
+
+.contact-image{
+    padding: 1rem;
+    margin: auto;
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+    flex: 1;
+}
+
+.mylist {
+    margin-top: 2rem;
+}
+
+.mylist li {
+    margin-top: 1rem ;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+object.list-icon {
+    width: 7%;
+  }
+
+.list-text {
+    position: relative;
+    top: 2px;
+  }
+
+#clock{
+    margin: 2rem;
+    text-align: center;
+    padding: 1rem;
+    font-size: 3rem;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+footer {
+    padding: 1rem 0;
+    text-align: center;
+}
+/* ---------------------------------------------------- */
+
+  /* DESKTOP*/
+@media all and (min-width: 992px) {
+    
+    .icon{
+        display: none;
+    }
+   
+    .menu {
+        gap: 20px;
+    }
+
+    .nav-item {
+        width: auto;
+        display: block;
+    }
+
+    .title-header {
+        font-size: 4rem;
+        font-weight: 600;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .contact-image {
+        display: block;
+    }
+
+    .flex-container{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    object.list-icon {
+        width: 20px;
+      }
+
+    #header {
+        margin-top: 10%;
+    }
+
+    #contact {
+        margin-top: 20%;
+    }
+
+    #clock {
+        margin-top: 30%;
+        margin-bottom: 30%;
+    }
+}

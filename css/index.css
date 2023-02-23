@@ -1,0 +1,285 @@
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* MYCSS */
+
+*{
+    box-sizing: border-box;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* MOBILE NAVBAR */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    padding: 1rem 0.5rem;
+    order: 0;
+    flex: 1;
+}
+
+.icon{
+    display: block;
+    color: black;
+    order: 1;
+}
+
+.nav-item {
+    order: 2;
+    width: 100%;
+    text-align: left;
+    padding: 1rem 0;
+    display: none;
+  }
+
+.active .nav-item {
+    display: block;
+  }
+
+
+  /* HERO */
+/* ------------------------------------------------- */
+#hero {
+    padding-top: 2rem;
+    border-top: 1px solid;
+}
+
+.hero-header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-paragraph {
+    font-size: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+   display: flex;
+   flex-wrap: wrap;
+   padding: 2rem;
+   justify-content: center;
+}
+
+.hero-image img{
+    max-width: 100%;
+}
+
+/* --------------------------------------------------------- */
+#shoes {
+    border-top: 1px solid;
+}
+
+.shoes-item {
+    border: 1px solid red;
+    border-radius: 50%;
+    margin: 1rem 0.5rem ;
+    padding: 0.5rem;
+    width: 5rem;
+    height: 5rem;
+}
+
+.shoes-header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 1rem;
+}
+
+/* ------------------------------------------------------ */
+#message {
+    border-top: 1px solid;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    padding: 1rem;
+    border: 1px solid black;
+    min-width: 100%;
+    flex: 1;
+}
+
+.flex-outer{
+    display: table;
+    width: 100%;
+}
+
+.flex-outer li {
+    margin-top: 1rem;
+    vertical-align: top;
+}
+
+.gender{
+    display: block;
+}
+
+.gender label{
+    width: auto;
+}
+
+label {
+    display: inline-block;
+    width: 103px;
+}
+
+
+input[type="text"], input[type="date"] {
+    padding: 0.5rem;
+    margin-top: 1rem;
+    width: 80%;
+}
+
+input[type="radio"]{
+    display: inline-block;
+}
+
+textarea{
+    margin-top: 1rem;
+    width: 80%;
+    vertical-align: top;
+}
+
+button[type="button"] {
+    background-color: #353535;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #2b9771;
+  }
+
+.info {
+    flex: 1;
+    padding: 10px;
+    min-width: 100%;
+    border: 1px solid black;
+}
+
+.info p {
+   padding: 1rem;
+}
+
+footer {
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* DESKTOP NAVBAR */
+@media all and (min-width: 992px) {
+    
+    .icon{
+        display: none;
+    }
+   
+    .menu {
+        gap: 20px;
+    }
+
+    .nav-item {
+        width: auto;
+        display: block;
+    }
+
+
+    #message{
+        flex-direction: row;
+    }
+
+    .info{
+        min-width: 0;
+    }
+
+    form{
+        min-width: 0;
+    }
+
+    input[type="text"], input[type="date"] {
+        margin-top: 0;
+    }
+
+    textarea{
+        margin-top: 0;
+    }
+
+    .gender{
+        display:inline-block;
+    }
+}
